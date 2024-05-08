@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-08T13:19:19 IST" name="Suite" finished-at="2024-05-08T13:21:35 IST" duration-ms="136869">
+    <groups>
+    </groups>
+    <test started-at="2024-05-08T13:19:19 IST" name="Test" finished-at="2024-05-08T13:21:35 IST" duration-ms="136869">
+      <class name="main.TestCases">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:19:19 IST" name="beforeClass" finished-at="2024-05-08T13:19:36 IST" duration-ms="16787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.zigwheels.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Invalid_login_TC_01()[pri:1, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:19:36 IST" name="Invalid_login_TC_01" finished-at="2024-05-08T13:19:55 IST" duration-ms="19173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalid_login_TC_01 -->
+        <test-method signature="Navigate_to_news_and_reviews_TC_02()[pri:2, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:19:55 IST" name="Navigate_to_news_and_reviews_TC_02" finished-at="2024-05-08T13:20:02 IST" duration-ms="6895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_news_and_reviews_TC_02 -->
+        <test-method signature="Navigate_to_new_launches_TC_03()[pri:3, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:02 IST" name="Navigate_to_new_launches_TC_03" finished-at="2024-05-08T13:20:24 IST" duration-ms="22691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_new_launches_TC_03 -->
+        <test-method signature="Navigate_to_new_bikes_TC_04()[pri:4, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:24 IST" name="Navigate_to_new_bikes_TC_04" finished-at="2024-05-08T13:20:38 IST" duration-ms="13259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_new_bikes_TC_04 -->
+        <test-method signature="Navigate_to_best_scooter_TC_05()[pri:5, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:38 IST" name="Navigate_to_best_scooter_TC_05" finished-at="2024-05-08T13:20:48 IST" duration-ms="10350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_best_scooter_TC_05 -->
+        <test-method signature="Navigate_to_electric_bike_TC_06()[pri:6, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:48 IST" name="Navigate_to_electric_bike_TC_06" finished-at="2024-05-08T13:20:53 IST" duration-ms="4848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_electric_bike_TC_06 -->
+        <test-method signature="Navigate_to_electric_car_TC_07()[pri:7, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:53 IST" name="Navigate_to_electric_car_TC_07" finished-at="2024-05-08T13:20:56 IST" duration-ms="2945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigate_to_electric_car_TC_07 -->
+        <test-method signature="getusedList_TC_08()[pri:8, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:56 IST" name="getusedList_TC_08" finished-at="2024-05-08T13:21:02 IST" duration-ms="6134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getusedList_TC_08 -->
+        <test-method signature="EMI_Calculator_TC_09()[pri:9, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:02 IST" name="EMI_Calculator_TC_09" finished-at="2024-05-08T13:21:15 IST" duration-ms="13126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EMI_Calculator_TC_09 -->
+        <test-method signature="Key_Specifications_TC_10()[pri:10, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:15 IST" name="Key_Specifications_TC_10" finished-at="2024-05-08T13:21:31 IST" duration-ms="16240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Key_Specifications_TC_10 -->
+        <test-method signature="getImg_TC_11()[pri:11, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:31 IST" name="getImg_TC_11" finished-at="2024-05-08T13:21:32 IST" duration-ms="638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getImg_TC_11 -->
+        <test-method signature="getSimilarBikes_TC_12()[pri:12, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:32 IST" name="getSimilarBikes_TC_12" finished-at="2024-05-08T13:21:34 IST" duration-ms="2150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSimilarBikes_TC_12 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:34 IST" name="afterClass" finished-at="2024-05-08T13:21:35 IST" duration-ms="1359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- main.TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
