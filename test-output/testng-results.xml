@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="11" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-08T13:19:19 IST" name="Suite" finished-at="2024-05-08T13:21:35 IST" duration-ms="136869">
+  <suite started-at="2024-05-09T21:43:33 IST" name="Suite" finished-at="2024-05-09T21:44:33 IST" duration-ms="60242">
     <groups>
     </groups>
-    <test started-at="2024-05-08T13:19:19 IST" name="Test" finished-at="2024-05-08T13:21:35 IST" duration-ms="136869">
+    <test started-at="2024-05-09T21:43:33 IST" name="Test" finished-at="2024-05-09T21:44:33 IST" duration-ms="60242">
       <class name="main.TestCases">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:19:19 IST" name="beforeClass" finished-at="2024-05-08T13:19:36 IST" duration-ms="16787" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:43:33 IST" name="beforeClass" finished-at="2024-05-09T21:43:44 IST" duration-ms="10462" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,55 +23,124 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Invalid_login_TC_01()[pri:1, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:19:36 IST" name="Invalid_login_TC_01" finished-at="2024-05-08T13:19:55 IST" duration-ms="19173" status="PASS">
+        <test-method signature="Invalid_login_TC_01()[pri:1, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:43:44 IST" name="Invalid_login_TC_01" finished-at="2024-05-09T21:43:48 IST" duration-ms="4209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid_login_TC_01 -->
-        <test-method signature="Navigate_to_news_and_reviews_TC_02()[pri:2, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:19:55 IST" name="Navigate_to_news_and_reviews_TC_02" finished-at="2024-05-08T13:20:02 IST" duration-ms="6895" status="PASS">
+        <test-method signature="Navigate_to_news_and_reviews_TC_02()[pri:2, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:43:48 IST" name="Navigate_to_news_and_reviews_TC_02" finished-at="2024-05-09T21:43:52 IST" duration-ms="3828" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate_to_news_and_reviews_TC_02 -->
-        <test-method signature="Navigate_to_new_launches_TC_03()[pri:3, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:02 IST" name="Navigate_to_new_launches_TC_03" finished-at="2024-05-08T13:20:24 IST" duration-ms="22691" status="PASS">
+        <test-method signature="Navigate_to_new_launches_TC_03()[pri:3, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:43:52 IST" name="Navigate_to_new_launches_TC_03" finished-at="2024-05-09T21:43:59 IST" duration-ms="7274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate_to_new_launches_TC_03 -->
-        <test-method signature="Navigate_to_new_bikes_TC_04()[pri:4, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:24 IST" name="Navigate_to_new_bikes_TC_04" finished-at="2024-05-08T13:20:38 IST" duration-ms="13259" status="PASS">
+        <test-method signature="Navigate_to_new_bikes_TC_04()[pri:4, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:43:59 IST" name="Navigate_to_new_bikes_TC_04" finished-at="2024-05-09T21:44:06 IST" duration-ms="6941" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate_to_new_bikes_TC_04 -->
-        <test-method signature="Navigate_to_best_scooter_TC_05()[pri:5, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:38 IST" name="Navigate_to_best_scooter_TC_05" finished-at="2024-05-08T13:20:48 IST" duration-ms="10350" status="PASS">
+        <test-method signature="Navigate_to_best_scooter_TC_05()[pri:5, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:06 IST" name="Navigate_to_best_scooter_TC_05" finished-at="2024-05-09T21:44:11 IST" duration-ms="5105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate_to_best_scooter_TC_05 -->
-        <test-method signature="Navigate_to_electric_bike_TC_06()[pri:6, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:48 IST" name="Navigate_to_electric_bike_TC_06" finished-at="2024-05-08T13:20:53 IST" duration-ms="4848" status="PASS">
+        <test-method signature="Navigate_to_electric_bike_TC_06()[pri:6, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:11 IST" name="Navigate_to_electric_bike_TC_06" finished-at="2024-05-09T21:44:15 IST" duration-ms="3370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate_to_electric_bike_TC_06 -->
-        <test-method signature="Navigate_to_electric_car_TC_07()[pri:7, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:53 IST" name="Navigate_to_electric_car_TC_07" finished-at="2024-05-08T13:20:56 IST" duration-ms="2945" status="PASS">
+        <test-method signature="Navigate_to_electric_car_TC_07()[pri:7, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:15 IST" name="Navigate_to_electric_car_TC_07" finished-at="2024-05-09T21:44:18 IST" duration-ms="3409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate_to_electric_car_TC_07 -->
-        <test-method signature="getusedList_TC_08()[pri:8, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:20:56 IST" name="getusedList_TC_08" finished-at="2024-05-08T13:21:02 IST" duration-ms="6134" status="PASS">
+        <test-method signature="getusedList_TC_08()[pri:8, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:18 IST" name="getusedList_TC_08" finished-at="2024-05-09T21:44:22 IST" duration-ms="3762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getusedList_TC_08 -->
-        <test-method signature="EMI_Calculator_TC_09()[pri:9, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:02 IST" name="EMI_Calculator_TC_09" finished-at="2024-05-08T13:21:15 IST" duration-ms="13126" status="PASS">
+        <test-method signature="EMI_Calculator_TC_09()[pri:9, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:22 IST" name="EMI_Calculator_TC_09" finished-at="2024-05-09T21:44:24 IST" duration-ms="1723" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (119, 569)
+  (Session info: chrome=121.0.6167.86)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2843b3ce7f9a04217b7e699f2272bdac, clickElement {id=F6FE006CCBEFD46E28FB9AC594FE72F5_element_1199}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56571}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56571/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2843b3ce7f9a04217b7e699f2272bdac)] -> xpath: (//span[@class='ft-link'])[1]]
+Session ID: 2843b3ce7f9a04217b7e699f2272bdac]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (119, 569)
+  (Session info: chrome=121.0.6167.86)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2843b3ce7f9a04217b7e699f2272bdac, clickElement {id=F6FE006CCBEFD46E28FB9AC594FE72F5_element_1199}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56571}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56571/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2843b3ce7f9a04217b7e699f2272bdac)] -> xpath: (//span[@class='ft-link'])[1]]
+Session ID: 2843b3ce7f9a04217b7e699f2272bdac
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at POM.HomePagePOM.clickEmi(HomePagePOM.java:585)
+at main.TestCases.EMI_Calculator_TC_09(TestCases.java:231)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EMI_Calculator_TC_09 -->
-        <test-method signature="Key_Specifications_TC_10()[pri:10, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:15 IST" name="Key_Specifications_TC_10" finished-at="2024-05-08T13:21:31 IST" duration-ms="16240" status="PASS">
+        <test-method signature="Key_Specifications_TC_10()[pri:10, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:24 IST" name="Key_Specifications_TC_10" finished-at="2024-05-09T21:44:29 IST" duration-ms="5368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Key_Specifications_TC_10 -->
-        <test-method signature="getImg_TC_11()[pri:11, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:31 IST" name="getImg_TC_11" finished-at="2024-05-08T13:21:32 IST" duration-ms="638" status="PASS">
+        <test-method signature="getImg_TC_11()[pri:11, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:29 IST" name="getImg_TC_11" finished-at="2024-05-09T21:44:30 IST" duration-ms="1305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getImg_TC_11 -->
-        <test-method signature="getSimilarBikes_TC_12()[pri:12, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:32 IST" name="getSimilarBikes_TC_12" finished-at="2024-05-08T13:21:34 IST" duration-ms="2150" status="PASS">
+        <test-method signature="getSimilarBikes_TC_12()[pri:12, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:30 IST" name="getSimilarBikes_TC_12" finished-at="2024-05-09T21:44:32 IST" duration-ms="1616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSimilarBikes_TC_12 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:main.TestCases@1fa121e2]" started-at="2024-05-08T13:21:34 IST" name="afterClass" finished-at="2024-05-08T13:21:35 IST" duration-ms="1359" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:main.TestCases@1fa121e2]" started-at="2024-05-09T21:44:32 IST" name="afterClass" finished-at="2024-05-09T21:44:33 IST" duration-ms="1554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

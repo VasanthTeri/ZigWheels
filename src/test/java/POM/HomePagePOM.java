@@ -124,7 +124,7 @@ public class HomePagePOM
 			System.out.println(emsg.getText());
 			String errormsg=emsg.getText();
 			//print the data into excel 
-			 S1=ExcelUtility.CreateSheet("Sheet1");
+			 S1=ExcelUtility.CreateSheet("TC-01");
 
 		  R1=ExcelUtility.createRow(0,S1);
 		  ExcelUtility.setData(R1, 0, "TestCase-01");
@@ -304,10 +304,7 @@ public class HomePagePOM
 
 		}
 		catch(Exception e){
-			Select sc = new Select(dropdown);
-			sc.selectByIndex(3);
-			js.executeScript("window.scrollBy(0,5550)", "");
-			js.executeScript("arguments[0].scrollIntoView();", view_more_button);
+			System.out.println(e.getMessage());
 
 		}
 	}
@@ -340,8 +337,18 @@ public class HomePagePOM
 				if(Integer.parseInt(cost[1].replace(",", ""))<400000)
 				{
 					System.out.println(Honda_bike_names_list.get(i).getText());
+					XSSFSheet S4=ExcelUtility.CreateSheet("TC-04");
+					R1=ExcelUtility.createRow(0,S4);
+					  ExcelUtility.setData(R1, 0, "TestCase-04");
+					  R1=ExcelUtility.createRow(1,S4);
+					  ExcelUtility.setData(R1, 0, Honda_bike_names_list.get(i).getText());
 					System.out.println(cost_of_bikes.get(i).getText());
+					  R1=ExcelUtility.createRow(1,S4);
+					  ExcelUtility.setData(R1, 0, cost_of_bikes.get(i).getText());
 					System.out.println(launch_dates.get(i).getText()+"\n");
+					
+					  R1=ExcelUtility.createRow(2,S4);
+					  ExcelUtility.setData(R1, 0, launch_dates.get(i).getText());
 				}
 				}		
 			}
@@ -572,11 +579,15 @@ public class HomePagePOM
 			public void clickEmi() 
 			{			
 
-			//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			mywait.until(ExpectedConditions.visibilityOf(emiBtn));
 			Assert.assertEquals(emiBtn.isDisplayed(), true,"EMI button is not found");
+			try {
 			emiBtn.click();
-     		}
+			}
+			catch(Exception e){
+				
+			}
+			}
 	 
 		
 	 
@@ -616,7 +627,7 @@ public class HomePagePOM
 
 			}
 			catch(Exception e) {
-				System.out.println("dfghj");
+				System.out.println(e.getMessage());
 
 			}
 

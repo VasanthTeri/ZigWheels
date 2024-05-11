@@ -10,20 +10,9 @@
     <classes>
       <class name="main.TestCases">
         <methods>
-          <include name="Key_Specifications_TC_10"/>
           <include name="EMI_Calculator_TC_09"/>
-          <include name="Invalid_login_TC_01"/>
-          <include name="Navigate_to_new_bikes_TC_04"/>
-          <include name="Navigate_to_new_launches_TC_03"/>
-          <include name="Navigate_to_electric_bike_TC_06"/>
-          <include name="getImg_TC_11"/>
-          <include name="getSimilarBikes_TC_12"/>
-          <include name="Navigate_to_electric_car_TC_07"/>
-          <include name="getusedList_TC_08"/>
           <include name="beforeClass"/>
-          <include name="Navigate_to_best_scooter_TC_05"/>
           <include name="afterClass"/>
-          <include name="Navigate_to_news_and_reviews_TC_02"/>
         </methods>
       </class> <!-- main.TestCases -->
     </classes>
