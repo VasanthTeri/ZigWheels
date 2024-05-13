@@ -107,6 +107,17 @@ public class ExcelUtility extends Base{
 			setData(r1,0,li.get(i).getText());
 		}
 	}
+	public static void setDataHondaName(List<WebElement> li,List<WebElement> li2,List<WebElement> li3,XSSFSheet S4) {
+		for(int i=1;i<=8;i++)
+		{
+			XSSFRow r1=createRow(i,S4);
+			setData(r1,0,li.get(i).getText());
+			setData(r1,1,li2.get(i).getText());
+			setData(r1,2,li3.get(i).getText());
+
+		}
+	}
+
 	public static void closeExcel() throws IOException {
 		workbook.write(file);
 		workbook.close();

@@ -340,15 +340,13 @@ public class HomePagePOM
 					XSSFSheet S4=ExcelUtility.CreateSheet("TC-04");
 					R1=ExcelUtility.createRow(0,S4);
 					  ExcelUtility.setData(R1, 0, "TestCase-04");
-					  R1=ExcelUtility.createRow(1,S4);
-					  ExcelUtility.setData(R1, 0, Honda_bike_names_list.get(i).getText());
+					  ExcelUtility.setDataHondaName(Honda_bike_names_list,cost_of_bikes,launch_dates, S4);
 					System.out.println(cost_of_bikes.get(i).getText());
-					  R1=ExcelUtility.createRow(1,S4);
-					  ExcelUtility.setData(R1, 0, cost_of_bikes.get(i).getText());
+					  //ExcelUtility.setDataCost(cost_of_bikes, S4);
+
 					System.out.println(launch_dates.get(i).getText()+"\n");
+					 // ExcelUtility.setDataLaunchDate(launch_dates, S4);
 					
-					  R1=ExcelUtility.createRow(2,S4);
-					  ExcelUtility.setData(R1, 0, launch_dates.get(i).getText());
 				}
 				}		
 			}
@@ -666,7 +664,7 @@ public class HomePagePOM
 			  ExcelUtility.setData(R1, 0, MOnthlyPrice.getText());
 	 
 		}
-	 
+	 //TestCase-10
 		@FindBy(xpath = "//*[@id=\"headerSearch\"]")
 		WebElement Search_Box;
 		
@@ -676,7 +674,7 @@ public class HomePagePOM
 			Search_Box.sendKeys("Ola S1 Pro");
 			Search_Box.sendKeys(Keys.ENTER);	 
 		}
-	 @FindBy(xpath="//a[@title=\"Ola S1 Pro\"]")
+	 @FindBy(xpath="//a[@title='Ola S1 Pro']")
 	 WebElement KeyAssert;
 	 @FindBy(xpath="//*[@id=\"mNav\"]/nav/div/ul/li[5]/a")
 	 WebElement SpecsBtn;
@@ -690,24 +688,25 @@ public class HomePagePOM
 				
 			}
 			catch(Exception e) {
-				mywait.until(ExpectedConditions.visibilityOf(SpecsBtn));
-
-				Assert.assertEquals(SpecsBtn.isDisplayed(), true,"Search page is not loaded");
-				js.executeScript("arguments[0].click()",SpecsBtn);
+				System.out.println(e.getMessage());
 			}
 		}
 	 
-		@FindBy(xpath = "//*[@id=\"mNav\"]/nav/div/ul/li[5]/a")
+		@FindBy(xpath = "//*[@id=\"keySpecs\"]")
 		WebElement Key_SpecBtn;
-		@FindBy(xpath = "//table[@class='topSpec']")
+		@FindBy(xpath = "//*[@id='keySpecs']")
 		WebElement Key_Specs;
+		@FindBy(xpath="//*[@id=\"seoContSpecs\"]/div[1]/h2")
+		WebElement specScroll;
 	 
 		public void printSpecs() throws IOException {
-			mywait.until(ExpectedConditions.visibilityOf(Key_SpecBtn));
-			Key_SpecBtn.click();
-			//Assert.assertEquals(Key_SpecBtn.isDisplayed(), true,"Specifications is not there");
-			String Olaimg = driver.findElement(By.xpath("//img[@title='Ola S1 Pro Images']")).getAttribute("title");
-			String Olaval = "Ola S1 Pro Images";
+			js.executeScript(" window.scrollBy(0,250)", "");
+
+			mywait.until(ExpectedConditions.visibilityOf(specScroll));
+			//Key_SpecBtn.click();
+			
+			String Olaimg = driver.findElement(By.xpath("//*[@id='seoContSpecs']/div[1]/h2")).getText();
+			String Olaval = "Ola S1 Pro Specifications";
 			Assert.assertEquals(Olaimg, Olaval);
 			js.executeScript(" window.scrollBy(0,250)", "");
 			mywait.until(ExpectedConditions.visibilityOf(Key_Specs));

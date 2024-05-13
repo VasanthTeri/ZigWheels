@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 09 21:43:33 IST 2024</td>
+<td>Started on:</td><td>Mon May 13 14:10:16 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>60 seconds (60242 ms)</td>
+<tr><td>Total time:</td><td>55 seconds (55204 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,97 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='main.TestCases.EMI_Calculator_TC_09()'><b>EMI_Calculator_TC_09</b><br>Test class: main.TestCases</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (119, 569)
-  (Session info: chrome=121.0.6167.86)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2843b3ce7f9a04217b7e699f2272bdac, clickElement {id=F6FE006CCBEFD46E28FB9AC594FE72F5_element_1199}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56571}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56571/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2843b3ce7f9a04217b7e699f2272bdac)] -&gt; xpath: (//span[@class=&apos;ft-link&apos;])[1]]
-Session ID: 2843b3ce7f9a04217b7e699f2272bdac
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at POM.HomePagePOM.clickEmi(HomePagePOM.java:585)
-	at main.TestCases.EMI_Calculator_TC_09(TestCases.java:231)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace512734831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace512734831'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (119, 569)
-  (Session info: chrome=121.0.6167.86)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2843b3ce7f9a04217b7e699f2272bdac, clickElement {id=F6FE006CCBEFD46E28FB9AC594FE72F5_element_1199}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56571}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56571/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2843b3ce7f9a04217b7e699f2272bdac)] -&gt; xpath: (//span[@class=&apos;ft-link&apos;])[1]]
-Session ID: 2843b3ce7f9a04217b7e699f2272bdac
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at POM.HomePagePOM.clickEmi(HomePagePOM.java:585)
-	at main.TestCases.EMI_Calculator_TC_09(TestCases.java:231)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>1</td>
-<td>main.TestCases@1fa121e2</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -167,44 +76,14 @@ Session ID: 2843b3ce7f9a04217b7e699f2272bdac
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='main.TestCases.Navigate_to_electric_bike_TC_06()'><b>Navigate_to_electric_bike_TC_06</b><br>Test class: main.TestCases</td>
-<td></td>
-<td>3</td>
-<td>main.TestCases@1fa121e2</td></tr>
-<tr>
-<td title='main.TestCases.getusedList_TC_08()'><b>getusedList_TC_08</b><br>Test class: main.TestCases</td>
-<td></td>
-<td>3</td>
-<td>main.TestCases@1fa121e2</td></tr>
-<tr>
-<td title='main.TestCases.Key_Specifications_TC_10()'><b>Key_Specifications_TC_10</b><br>Test class: main.TestCases</td>
-<td></td>
-<td>5</td>
-<td>main.TestCases@1fa121e2</td></tr>
-<tr>
 <td title='main.TestCases.Navigate_to_news_and_reviews_TC_02()'><b>Navigate_to_news_and_reviews_TC_02</b><br>Test class: main.TestCases</td>
 <td></td>
-<td>3</td>
+<td>2</td>
 <td>main.TestCases@1fa121e2</td></tr>
 <tr>
-<td title='main.TestCases.Navigate_to_electric_car_TC_07()'><b>Navigate_to_electric_car_TC_07</b><br>Test class: main.TestCases</td>
+<td title='main.TestCases.EMI_Calculator_TC_09()'><b>EMI_Calculator_TC_09</b><br>Test class: main.TestCases</td>
 <td></td>
-<td>3</td>
-<td>main.TestCases@1fa121e2</td></tr>
-<tr>
-<td title='main.TestCases.Navigate_to_new_launches_TC_03()'><b>Navigate_to_new_launches_TC_03</b><br>Test class: main.TestCases</td>
-<td></td>
-<td>7</td>
-<td>main.TestCases@1fa121e2</td></tr>
-<tr>
-<td title='main.TestCases.Navigate_to_best_scooter_TC_05()'><b>Navigate_to_best_scooter_TC_05</b><br>Test class: main.TestCases</td>
-<td></td>
-<td>5</td>
-<td>main.TestCases@1fa121e2</td></tr>
-<tr>
-<td title='main.TestCases.getSimilarBikes_TC_12()'><b>getSimilarBikes_TC_12</b><br>Test class: main.TestCases</td>
-<td></td>
-<td>1</td>
+<td>9</td>
 <td>main.TestCases@1fa121e2</td></tr>
 <tr>
 <td title='main.TestCases.Invalid_login_TC_01()'><b>Invalid_login_TC_01</b><br>Test class: main.TestCases</td>
@@ -214,12 +93,47 @@ Session ID: 2843b3ce7f9a04217b7e699f2272bdac
 <tr>
 <td title='main.TestCases.Navigate_to_new_bikes_TC_04()'><b>Navigate_to_new_bikes_TC_04</b><br>Test class: main.TestCases</td>
 <td></td>
-<td>6</td>
+<td>4</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.getSimilarBikes_TC_12()'><b>getSimilarBikes_TC_12</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>1</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.Navigate_to_new_launches_TC_03()'><b>Navigate_to_new_launches_TC_03</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>4</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.Key_Specifications_TC_10()'><b>Key_Specifications_TC_10</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>5</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.getusedList_TC_08()'><b>getusedList_TC_08</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>3</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.Navigate_to_best_scooter_TC_05()'><b>Navigate_to_best_scooter_TC_05</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>4</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.Navigate_to_electric_bike_TC_06()'><b>Navigate_to_electric_bike_TC_06</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>2</td>
+<td>main.TestCases@1fa121e2</td></tr>
+<tr>
+<td title='main.TestCases.Navigate_to_electric_car_TC_07()'><b>Navigate_to_electric_car_TC_07</b><br>Test class: main.TestCases</td>
+<td></td>
+<td>2</td>
 <td>main.TestCases@1fa121e2</td></tr>
 <tr>
 <td title='main.TestCases.getImg_TC_11()'><b>getImg_TC_11</b><br>Test class: main.TestCases</td>
 <td></td>
-<td>1</td>
+<td>0</td>
 <td>main.TestCases@1fa121e2</td></tr>
 </table><p>
 </body>
