@@ -104,13 +104,14 @@ public class HomePagePOM
 			Set <String> Handles=driver.getWindowHandles();
 			List <String> Id=new ArrayList<>(Handles);
 				//WindowHandles are Stored in a List[Id]
-			
 			driver.switchTo().window(Id.getLast());
 			mywait.until(ExpectedConditions.visibilityOf(input));
+			// Checks whether input box is present or not
 			Assert.assertEquals(input.isDisplayed(), true,"Google Login Is not Visible");
 				//Passing the String into the Email Box
 		    act.sendKeys(input, "fhdszkjk@gmaii.com").perform();
-			Assert.assertEquals(NextBtn.isDisplayed(), true,"Next Button is not Clickable");
+		    //Checks whether the Next button is displayed or not
+		    Assert.assertEquals(NextBtn.isDisplayed(), true,"Next Button is not Clickable");
 				//Clicking the Next Button
 			js.executeScript("arguments[0].click();", NextBtn);
 
@@ -123,7 +124,7 @@ public class HomePagePOM
 				
 			System.out.println(emsg.getText());
 			String errormsg=emsg.getText();
-			//print the data into excel 
+			//Print the data into excel 
 			 S1=ExcelUtility.CreateSheet("TC-01");
 
 		  R1=ExcelUtility.createRow(0,S1);
@@ -133,8 +134,10 @@ public class HomePagePOM
 			}
 			catch(Exception e){
 				//Capcha is Required For Sometimes
-				act.sendKeys(input2, "capcha").perform();
+				act.sendKeys(input2, "capcha").perform();			
+				//Checks whether the Next button is displayed or not	
 				Assert.assertEquals(NextBtn.isDisplayed(), true,"Next Button is not Clickable");
+				//Clicking the Next Button
 				js.executeScript("arguments[0].click();", NextBtn);
 				System.out.println(emsg2.getText());
 
@@ -160,9 +163,10 @@ public class HomePagePOM
 	WebElement LatestScroll;
 	//ForTESTCASE2	
 	public void ClickNews()	{
-		
 		News.click();
+		//Scrolling down till the Latest element to be visible
 		js.executeScript("arguments[0].scrollIntoView();", LatestScroll);
+		//Checks whether the Latest element is present or not
 		Assert.assertEquals(LatestScroll.isDisplayed(), true,"Not IN News Page");
 	}
 	public void PrintNews() throws IOException {
@@ -210,17 +214,22 @@ public class HomePagePOM
 			return AstonScroll;
 		}
 		public void Launches() {
-			
+			//Checks whether the New Cars is Visible or not
 			Assert.assertEquals(Cars.isDisplayed(), true,"Not in home page");
-
+			//Clicking the New cars
 			js.executeScript("arguments[0].click();", Cars);
+			//Checks the Latest button is present or not
 			Assert.assertEquals(LatestBtn.isDisplayed(), true,"Not IN New Cars Page");
+			//Clicking Latest
 			js.executeScript("arguments[0].click();", LatestBtn);
 			
-			try {			
-				js.executeScript("arguments[0].click();", Mahindra);
+			try {	
+				//Clicking on Mahindra
+						js.executeScript("arguments[0].click();", Mahindra);
 			mywait.until(ExpectedConditions.visibilityOf(MahindraTextValidation));
+			//Checks whether Mahindra is Visible or not
 			Assert.assertEquals(MahindraTextValidation.isDisplayed(), true, "Mahindra text not found");
+			//Scrolling to view Mahindra
 			js.executeScript("arguments[0].scrollIntoView();", MahindraSpecsScroll);
 			}
 			catch(Exception e) {
@@ -228,6 +237,7 @@ public class HomePagePOM
 			}
 		public void printSpecifications() throws IOException {	
 			try {
+				//Checks whether the specifications of Mahindra is present or not 
 				Assert.assertEquals(MahindraSpecs.isDisplayed(), true, "Maindra specifications not found");
 				System.out.println(MahindraSpecs.getText());
 				XSSFSheet S3=ExcelUtility.CreateSheet("TC-03");
@@ -269,37 +279,44 @@ public class HomePagePOM
 	public void newbikes_tag() 
 	{
 		try {
+			//Checks Whether New Bikes is displayed or not
 	Assert.assertEquals(new_bikes_tag.isDisplayed(), true,"Not in home page");
-
+	//moving to the New Bikes tag
 	 act.moveToElement(new_bikes_tag).perform();
 	}
 		catch(Exception e){
 			driver.navigate().back();
+			//Checks Whether New Bikes is displayed or not
 			Assert.assertEquals(new_bikes_tag.isDisplayed(), true,"Not in home page");
-
+			 //moving to the New Bikes 
 			 act.moveToElement(new_bikes_tag).perform();
 		}
 	}
 	public void select_upcomingbikes() 
 	{
 		js.executeScript("arguments[0].click();", upcoming_bikes);
+		//Validating the Title of the Current Page
 		Assert.assertEquals(driver.getTitle(), "Upcoming Bikes in India - Check Price, Launch Date, Images and Latest News", "Not in Bike Page");
 
 	}
 	public void dropdown() 
 	{
+		//Checks Whether the DropDown Box is displayed or not
 		Assert.assertEquals(dropdown.isDisplayed(), true, "DropDown is Not Visible");
-	
-		js.executeScript("arguments[0].click();", dropdown);
+			js.executeScript("arguments[0].click();", dropdown);
 		//dropdown.click();
 	}
 	public void select_brand() 
 	{
 		try {
 			mywait.until(ExpectedConditions.visibilityOf(dropdown));
+			//Using Select Class Drop down is performed 
 			Select sc = new Select(dropdown);
+			//Selecting the element in the drop down using index
 			sc.selectByIndex(3);
+			//Scrolling down till the end of the page
 			js.executeScript("window.scrollBy(0,5550)", "");
+			//Clicking on View more Bikes
 			js.executeScript("arguments[0].scrollIntoView();", view_more_button);
 
 		}
@@ -312,6 +329,7 @@ public class HomePagePOM
 	public void select_viewmorebikes_tag()
 	{
 		mywait.until(ExpectedConditions.visibilityOf(view_more_button));
+		//Checks Whether the View More Bikes Button is present or not
 		Assert.assertEquals(view_more_button.isDisplayed(), true, "View More Button isnot visible");
 		js.executeScript("arguments[0].click();", view_more_button);
 
@@ -342,18 +360,14 @@ public class HomePagePOM
 					  ExcelUtility.setData(R1, 0, "TestCase-04");
 					  ExcelUtility.setDataHondaName(Honda_bike_names_list,cost_of_bikes,launch_dates, S4);
 					System.out.println(cost_of_bikes.get(i).getText());
-					  //ExcelUtility.setDataCost(cost_of_bikes, S4);
 
 					System.out.println(launch_dates.get(i).getText()+"\n");
-					 // ExcelUtility.setDataLaunchDate(launch_dates, S4);
 					
 				}
 				}		
 			}
-		
+		//Checks Whether the Bikes name with Honda is displayed or not
 		Assert.assertEquals(Honda_bike_name.isDisplayed(), true);
-
-
 		}
 
 	//ForTESTCASE5	
@@ -376,33 +390,43 @@ public class HomePagePOM
 		public void SelectScooter() {
 			try {
 		    mywait.until(ExpectedConditions.visibilityOf(Scooter));
-			Assert.assertEquals(Scooter.isDisplayed(), true, "Scooter is Clickable");
+		    //Checks whether the Scooter is present or not
+		    Assert.assertEquals(Scooter.isDisplayed(), true, "Scooter is Clickable");
 		    Scooter.click();}
 			catch(Exception e) {
 				driver.navigate().back();
 				mywait.until(ExpectedConditions.visibilityOf(Scooter));
+			    //Checks whether the Scooter is present or not
 				Assert.assertEquals(Scooter.isDisplayed(), true, "Scooter is Clickable");
 			    Scooter.click();
 			}
 		}
 		public void SelectBestScooter()
-		{
+		{			//Scrolling down till the BestScoooter element to be visible
 	    	js.executeScript(" window.scrollBy(0,450)","");
 		    mywait.until(ExpectedConditions.visibilityOf(BestScooter));
-			Assert.assertEquals(BestScooter.isDisplayed(), true);
+		    //Checks whether the BestScooter button is present or not
+		    Assert.assertEquals(BestScooter.isDisplayed(), true);
+			//Clicking Best scooter
 		    js.executeScript("arguments[0].click();", BestScooter);
+		    //Validating the Url of the Current Page with the credentials
 		    Assert.assertEquals(driver.getCurrentUrl(), "https://www.zigwheels.com/newbikes/best-scooters", "Not in Sccoter Page");
+		    //Scrolling down till the Visibility of On road price element
 		    js.executeScript(" window.scrollBy(0,250)","");  
 		    mywait.until(ExpectedConditions.visibilityOf(Onroad));
+		    //Checks whether the On road-price is present or not
 		    Assert.assertEquals(Onroad.isDisplayed(), true, "Not in Best Scooter Page");
+		    //Clicking on the Check-on road price
 		    js.executeScript("arguments[0].click();", Onroad);
-	    	js.executeScript(" window.scrollBy(0,350)","");
+		    //Scrolling down to see the details
+		    js.executeScript(" window.scrollBy(0,350)","");
 
 		}
 		public void printsummary() throws IOException {
-
+			//Checks whether the Activa is present or not
 	    	Assert.assertEquals(Activa.isDisplayed(), true, "Activa Scooty is Visible");
-			System.out.println(summary.getText());
+	    	//Printing all the details of the Activa
+	    	System.out.println(summary.getText());
 			XSSFSheet S4=ExcelUtility.CreateSheet("TC-05");
 			  R1=ExcelUtility.createRow(0,S4);
 			  ExcelUtility.setData(R1, 0, "TestCase-05");
@@ -432,31 +456,37 @@ public class HomePagePOM
 	//ForTESTCASE6
 		public void hoverToElectricVehicles()
 		{try {
+			//Checks whether the Electric  Vehicles element is present or not
 			Assert.assertEquals(evdrop.isDisplayed(), true, "Electric Bike is clickable");
-
+			//move to the Electric Vehicles drop down will appear
 			act.moveToElement(evdrop).perform();
 		}
 		catch(Exception e) {
 		    mywait.until(ExpectedConditions.visibilityOf(evdrop));
-
+			//Checks whether the Electric  Vehicles element is present or not
 			Assert.assertEquals(evdrop.isDisplayed(), true, "Electric Bike is clickable");
-
+			//move to the Electric Vehicles drop down will appear
 			act.moveToElement(evdrop).perform();
 		}
 		}
 	
 		public void clickchennai()
-		{	js.executeScript("arguments[0].click()",bikecharge);
-
+		{	
+			//Clicking on Electric Bike Charging Stations
+			js.executeScript("arguments[0].click()",bikecharge);
+			//Validating the Title of the Current Page with the following Credentials
 			Assert.assertEquals(driver.getTitle(), "Electric Bike Charging Stations- Find out Electric Vehicle Charging Stations in Your City @ ZigWheels", "Page Title is not Matching");
+			//Scrolling down till the element chennai to be visible
 			js.executeScript("arguments[0].scrollIntoView();", chennai);
+			//Clicking on Chennai
 			js.executeScript("arguments[0].click()",chennai);
 		}
 		public void printaddress() throws IOException 
 		{
+			//Checks Total number of Bikes Charging stations in Chennai
 		Assert.assertEquals(TotalBikes.isDisplayed(), true, "Chennai is not visible");
+		//Scrolling till the Search Electric Bike Charging Stations element to be visible
 		js.executeScript("arguments[0].scrollIntoView();", SearchScroll);
-
 		js.executeScript("arguments[0].click()",Add1);
 		System.out.println(Add1.getText());
 		System.out.print(Add2.getText());
@@ -482,13 +512,14 @@ public class HomePagePOM
 		public void ClickingElectricCar() {
 			try {
 				js.executeScript("scroll(0, -5000)");
-
 			    mywait.until(ExpectedConditions.visibilityOf(evdrop));
-				Assert.assertEquals(evdrop.isDisplayed(), true, "Electric Car is not visible");
-
+				//Checks whether the Electric  Vehicles element is present or not
+			    Assert.assertEquals(evdrop.isDisplayed(), true, "Electric Car is not visible");
+				//move to the Electric Vehicles drop down will appear
 			act.moveToElement(evdrop).perform();
-			
+			//Clicking on Electric Car Charging Stations
 			js.executeScript("arguments[0].click()",CarCharge);
+			//Scrolling down till the element chennai to be visible
 			js.executeScript("arguments[0].scrollIntoView();", ChennaiScroll);			
 		}
 			catch(Exception e) {
@@ -496,12 +527,15 @@ public class HomePagePOM
 				}
 			}
 		public void ClickingChennai() {
+			//Checks the Chennai button is present or not
 			Assert.assertEquals(ChennaiCity.isDisplayed(), true, "Not in Electric Car Page" );
+			//Clicking on Chennai 
 			js.executeScript("arguments[0].click()",ChennaiCity);
 		}
 		public void PrintStations() throws IOException {
 			js.executeScript("arguments[0].scrollIntoView();", SearchScroll);			
-		    Assert.assertEquals(NoOfStations.isDisplayed(), true, "Stations is not Displayed");
+			//Checks Total number of Car Charging stations in Chennai
+			Assert.assertEquals(NoOfStations.isDisplayed(), true, "Stations is not Displayed");
 		    System.out.println(NoOfStations.getText());
 		    XSSFSheet S7=ExcelUtility.CreateSheet("TC-07");
 			  R1=ExcelUtility.createRow(0,S7);
@@ -512,7 +546,7 @@ public class HomePagePOM
 		public boolean Station() {
 			return NoOfStations.isDisplayed();
 		}		
-		
+		//FOR TESTCASE 8
 		@FindBy(xpath = "//*[@id=\"headerNewNavWrap\"]/nav/div/ul/li[7]/a")
 		WebElement usedCarsSection;
 		@FindBy(xpath = "//*[@id=\"headerNewNavWrap\"]/nav/div/ul/li[7]/ul/li/div[2]/ul/li[4]/a")
@@ -527,10 +561,12 @@ public class HomePagePOM
 	 
 		public void moveToUsedCars() throws Exception {
 			try {
+				//Scroling to the top of the page 
 				js.executeScript("scroll(0, -5000)");
-
 			    mywait.until(ExpectedConditions.visibilityOf(usedCarsSection));
-		    Assert.assertEquals(usedCarsSection.isDisplayed(), true,"Failed in first Step");
+			    //Checks whether the Used Cars is present or not
+			   Assert.assertEquals(usedCarsSection.isDisplayed(), true,"Failed in first Step");
+		    //moving to the Used Cars element Drop down will visible with list of elements
 		    act.moveToElement(usedCarsSection).perform();
 			}
 			catch(Exception e){
@@ -543,6 +579,7 @@ public class HomePagePOM
 			mywait.until(ExpectedConditions.visibilityOf(selectCHN));
 
 			selectCHN.click();
+			//Checks whether Chennai button is present or not in the Used Cars Drop down
 		    Assert.assertEquals(ChennaiUsedcar.isDisplayed(), true, "Chennai si not displayed");
 			}
 			catch(Exception e){
@@ -573,30 +610,8 @@ public class HomePagePOM
 			ExcelUtility.setDataUsedNews(carName, S8);
 			
 		}
-	 
-			public void clickEmi() 
-			{			
+		//FOR TEST CASE 9
 
-			mywait.until(ExpectedConditions.visibilityOf(emiBtn));
-			Assert.assertEquals(emiBtn.isDisplayed(), true,"EMI button is not found");
-			try {
-			emiBtn.click();
-			}
-			catch(Exception e){
-				
-			}
-			}
-	 
-		
-	 
-		public void clickMake() {
-			js.executeScript("arguments[0].scrollIntoView();", EmiStartScroll);			
-
-			Select sc = new Select(make);
-			sc.selectByIndex(4);
-			Assert.assertEquals(make.isDisplayed(), true);
-
-		}
 	 
 		@FindBy(xpath = "(//span[@class='select-wrapper'])[2]")
 		WebElement model;
@@ -612,15 +627,40 @@ public class HomePagePOM
 		WebElement EmiStartScroll;
 		@FindBy(xpath="/html/body/div[8]/div[2]/div[1]/div[6]/div[2]/a")
 		WebElement EmiEndScroll;
+
+		public void clickEmi() 
+		{			
+
+		mywait.until(ExpectedConditions.visibilityOf(emiBtn));
+		//Checks whether the Car EMI calculator button is Visible or not
+		Assert.assertEquals(emiBtn.isDisplayed(), true,"EMI button is not found");
+		try {
+			//Clicking Car EMI Calculator
+		emiBtn.click();
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		}
+ 
+	
+ 
+	public void clickMake() {
+		js.executeScript("arguments[0].scrollIntoView();", EmiStartScroll);			
+		//Using the Select Class the Select Make Drop down is handled
+		Select sc = new Select(make);
+		sc.selectByIndex(4);
+		//Checks the Select Make Drop down box is visible or not
+		Assert.assertEquals(make.isDisplayed(), true);
+
+	}
 		public void ClickModel() {
 			try {
-				
-			//js.executeScript(" window.scrollBy(0,250)", "");			
-
+				//Using Select Class The Select Model drop down is handled
 			Select se = new Select(driver.findElement(By.id("modelId")));
 			mywait.until(ExpectedConditions.visibilityOf(model));
 			se.selectByIndex(3);
-
+			//Checks whether the Select Model drop down box is visible or not
 			Assert.assertEquals(varient.isDisplayed(), true,"varient is not displayed");		
 
 			}
@@ -633,10 +673,11 @@ public class HomePagePOM
 		public void clickvarient() {
 			try {
 				js.executeScript("arguments[0].scrollIntoView();", EmiStartScroll);			
-
+				//Using Select Class The Select Variant  drop down is handled
 			Select sc = new Select(varient);
 			mywait.until(ExpectedConditions.visibilityOf(varient));
 			sc.selectByIndex(2);
+			//Checks whether the Select Model drop down box is visible or not
 			Assert.assertEquals(varient.isDisplayed(), true,"varient is not displayed");
 					
 			}
@@ -647,11 +688,13 @@ public class HomePagePOM
 	 
 		
 		public void PrintMOnthlyEMI() throws InterruptedException, IOException {
+			//Checks Whether the Check EMI button is present or not
 			Assert.assertEquals(checkBtn.isDisplayed(), true,"Check button is not clickable");
-
+			//Clicking Check EMI
 			checkBtn.click();
-	 
+			//Scrolling down till the Duration element to be visible 
 			js.executeScript(" window.scrollBy(0,850)", "");
+			//Clicking on the radio button of the year-2
 			year.click();
 			WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			mywait.until(ExpectedConditions.visibilityOf(MOnthlyPrice));
@@ -665,23 +708,36 @@ public class HomePagePOM
 	 
 		}
 	 //TestCase-10
-		@FindBy(xpath = "//*[@id=\"headerSearch\"]")
-		WebElement Search_Box;
+			@FindBy(xpath = "//*[@id=\"headerSearch\"]")
+			WebElement Search_Box;
+			@FindBy(xpath = "//*[@id=\"keySpecs\"]")
+			WebElement Key_SpecBtn;
+			@FindBy(xpath = "//*[@id='keySpecs']")
+			WebElement Key_Specs;
+			@FindBy(xpath="//*[@id=\"seoContSpecs\"]/div[1]/h2")
+			WebElement specScroll;
+			@FindBy(xpath="//a[@title='Ola S1 Pro']")
+			WebElement KeyAssert;
+			@FindBy(xpath="//*[@id=\"mNav\"]/nav/div/ul/li[5]/a")
+			WebElement SpecsBtn;
 		
 	 
 		public void clickingOnSearchBox() throws InterruptedException {
+			//Checks whether the Search box is displayed on the top of the page
 			Assert.assertEquals(Search_Box.isDisplayed(), true,"Search button is not clickable");
+			//Sending the text using send keys that need to be searched
 			Search_Box.sendKeys("Ola S1 Pro");
-			Search_Box.sendKeys(Keys.ENTER);	 
+			Search_Box.sendKeys(Keys.ENTER);	//Performing Enter Key Action using Keys.ENETR (i.e  starts to search the results of the text that is in the search box)
+ 
 		}
-	 @FindBy(xpath="//a[@title='Ola S1 Pro']")
-	 WebElement KeyAssert;
-	 @FindBy(xpath="//*[@id=\"mNav\"]/nav/div/ul/li[5]/a")
-	 WebElement SpecsBtn;
+	
 		public void cickResult() {
 			try {
 				mywait.until(ExpectedConditions.visibilityOf(KeyAssert));
+				//Checks whether the Search product is present or not
+
 				Assert.assertEquals(KeyAssert.isDisplayed(), true,"Search page is not loaded");
+				//Clicking on the Ola S1 Pro
 
 				js.executeScript("arguments[0].click()",KeyAssert);
 
@@ -691,25 +747,19 @@ public class HomePagePOM
 				System.out.println(e.getMessage());
 			}
 		}
-	 
-		@FindBy(xpath = "//*[@id=\"keySpecs\"]")
-		WebElement Key_SpecBtn;
-		@FindBy(xpath = "//*[@id='keySpecs']")
-		WebElement Key_Specs;
-		@FindBy(xpath="//*[@id=\"seoContSpecs\"]/div[1]/h2")
-		WebElement specScroll;
-	 
+
 		public void printSpecs() throws IOException {
 			js.executeScript(" window.scrollBy(0,250)", "");
 
-			mywait.until(ExpectedConditions.visibilityOf(specScroll));
-			//Key_SpecBtn.click();
-			
+			mywait.until(ExpectedConditions.visibilityOf(specScroll));			
 			String Olaimg = driver.findElement(By.xpath("//*[@id='seoContSpecs']/div[1]/h2")).getText();
 			String Olaval = "Ola S1 Pro Specifications";
+			//Checks the Both string Values same or not
 			Assert.assertEquals(Olaimg, Olaval);
 			js.executeScript(" window.scrollBy(0,250)", "");
 			mywait.until(ExpectedConditions.visibilityOf(Key_Specs));
+			//Printing all the Specifications Present or not
+
 			System.out.println(Key_Specs.getText());
 			XSSFSheet S10=ExcelUtility.CreateSheet("TC-10");
 			  R1=ExcelUtility.createRow(0,S10);
@@ -717,7 +767,8 @@ public class HomePagePOM
 			  R1=ExcelUtility.createRow(1,S10);
 			  ExcelUtility.setData(R1, 0, Key_Specs.getText());
 		}
-	 
+		//FOR TESTCASE 11
+		//Download the image and save it in a folder
 		public void getImg() {
 			WebElement img = driver.findElement(By.xpath("//img[@title='Ola S1 Pro Images']"));
 			String imgPath = img.getAttribute("src");
@@ -735,7 +786,8 @@ public class HomePagePOM
 			}
 	 
 		}
-	 
+		//FOR TESTCASE 12
+
 		public void SimilarBikes() throws InterruptedException, IOException 
 		{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -744,6 +796,8 @@ public class HomePagePOM
 			js.executeScript(" window.scroll(0,500)", "");
 			String Tvsimg = driver.findElement(By.xpath("//img[@title='TVS iQube']")).getAttribute("title");
 			String Tvsval = "TVS iQube";
+			//Validating both the String Values are same or not
+
 			Assert.assertEquals(Tvsimg, Tvsval);
 			System.out.println("The Similar bikes are");
 			List<WebElement> bikeNames = driver.findElements(By.xpath("//a[@itemprop='relatedLink']"));	 
